@@ -1,7 +1,7 @@
 //alerta:
 window.alert('mais uma vez...')
 
-//confirmação:
+//confirmação:'ok' ou 'cancel'
 window.confirm('Iremos te matar')
 
 //prompts:
