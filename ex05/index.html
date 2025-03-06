@@ -16,9 +16,31 @@
     <h1>ESTUDOS DO DOM</h1>
     <p>resultado</p>
     <p>aprendendo o que é <strong>DOM</strong> em JavaScript</p>
-    <div>clique em mim</div>
+    <p>abacate e sal</p>
+    <p>uva com limão</p>
+    <p>bananeiras rosas</p>
+    <div id="msg">clique em mim</div>
+    <div id="msg2">alakhazan</div>
     <script>
-        
+        window.document.write(window.navigator.appName)
+        window.document.write('<br>')
+        window.document.write(window.navigator.language)
+        window.document.write('<br>')
+        window.document.write(window.navigator.platform)
+        window.document.write('<br>  <br>')
+    //TagName    
+        var p1= window.document.getElementsByTagName('p')[0]
+        var p2= window.document.getElementsByTagName('p')[1]
+        window.document.write(p1.innerText)
+        p2.style.color='blue'
+    //ElementById
+        var d= window.document.getElementById('msg')
+        d.style.background='black'
+        d.innerText='ka...me...ha...me...haaaaaaaaaaaaaaa'
+    //QuerySelector    
+        var dd=window.document.querySelector('div#msg2')
+        dd.style.background='red'
+        dd.style.color='rgb(24, 147, 255)'
     </script>
 </body>
 </html>
