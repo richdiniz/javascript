@@ -12,13 +12,6 @@ function v() {
 
 
 
-
-
-
-
-
-
-
 /*CODIGOS:
 EU:
 function v() {
