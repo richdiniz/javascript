@@ -4,7 +4,7 @@ function v() {
     
     if (pais.toLowerCase() == 'brasil') {  // Converte tudo para minúsculas
         res.innerHTML = 'Você é <strong>brasileiro</strong>!<br>';
-        res.innerHTML+='<img src="https://www.fadadosexo.com/wp-content/uploads/2021/07/convert-so-fotos-de-bucetas-7.webp" alt="" width="400px">'
+        res.innerHTML+='<img src="https://imgs.search.brave.com/hqktnWGFQe0IJ1dPR3ce_4aspZmR855xmgbwDIj0emY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naXRo/dWIuY29tL3Zvb2Rv/b3Rpa2lnb2QvbG9n/by5qcy9yYXcvbWFz/dGVyL2pzLnBuZw" alt="" width="400px">'
     } else {
         res.innerHTML = 'Você é <strong>estrangeiro</strong>!';
     }
