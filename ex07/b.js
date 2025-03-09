@@ -4,9 +4,9 @@ console.log('Agora são exatamente '+hora+'horas.')
 
 if(hora>=1 && hora<=5){
     console.log('MADRUGADA?Vá dormir!')
-}if(hora>6 && hora<12){
+}else if(hora>6 && hora<12){
     console.log('Bom Dia!')
-}if(hora<18){
+}else if(hora<18){
     console.log('Boa Tarde!')
 }else{
     console.log('Boa Noite!')
