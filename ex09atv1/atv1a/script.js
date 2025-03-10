@@ -3,7 +3,8 @@ function carregar(){
     var img= window.document.getElementById('imagem')
     var data= new Date()
     var hora= data.getHours()
-    msg.innerHTML= 'agora são '+hora+'horas.'
+    var min= data.getMinutes()
+    msg.innerHTML= 'agora são '+hora+'h e '+min+'min.'
 
 
     if(hora>=1 && hora<=5){
