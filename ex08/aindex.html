@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dia da Semana</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    #dia {
+      font-size: 1.8em;
+      color: #04214a;
+      background-color: #ffffff;
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Que dia é hoje?</h1>
+  <div id="dia"></div>
+
+  <script>
+    var agora = new Date();
+    var diasem = agora.getDay();
+    var texto = '';
+
+    switch(diasem){
+      case 0:
+        texto = 'Domingo';
+        break;
+      case 1:
+        texto = 'Segunda-feira';
+        break;
+      case 2:
+        texto = 'Terça-feira';
+        break;
+      case 3:
+        texto = 'Quarta-feira';
+        break;
+      case 4:
+        texto = 'Quinta-feira';
+        break;
+      case 5:
+        texto = 'Sexta-feira';
+        break;
+      case 6:
+        texto = 'Sábado';
+        break;
+      default:
+        texto = 'Erro: dia inválido!';
+    }
+
+    document.getElementById('dia').innerHTML = `Hoje é <strong>${texto}</strong>.`;
+  </script>
+
+</body>
+</html>
