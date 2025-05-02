@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Saudação do Dia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0e8f5;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    #mensagem {
+      font-size: 1.5em;
+      color: #04214a;
+      margin-top: 20px;
+      background-color: #ffffff;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Saudação Automática</h1>
+  <div id="mensagem"></div>
+
+  <script>
+    var agora = new Date();
+    var hora = agora.getHours();
+    var msg = document.getElementById('mensagem');
+
+    msg.innerHTML = 'Agora são exatamente ' + hora + ' horas.<br>';
+
+    if (hora >= 1 && hora <= 5) {
+      msg.innerHTML += '🌙 MADRUGADA? Vá dormir!';
+    } else if (hora > 6 && hora < 12) {
+      msg.innerHTML += '☀️ Bom Dia!';
+    } else if (hora < 18) {
+      msg.innerHTML += '🌤️ Boa Tarde!';
+    } else {
+      msg.innerHTML += '🌙 Boa Noite!';
+    }
+  </script>
+</body>
+</html>
