@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Estruturas de Repetição</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #04214a;
+    }
+
+    section {
+      background: #fff;
+      padding: 15px 25px;
+      margin: 20px auto;
+      border-left: 5px solid #04214a;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #04214a;
+    }
+
+    .output {
+      background: #f1f1f1;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Repetições em JavaScript</h1>
+
+  <section>
+    <h2>While (teste lógico no início)</h2>
+    <div class="output" id="saida-while"></div>
+  </section>
+
+  <section>
+    <h2>Do...While (teste lógico no final)</h2>
+    <div class="output" id="saida-do"></div>
+  </section>
+
+  <section>
+    <h2>For (variável de controle)</h2>
+    <div class="output" id="saida-for"></div>
+  </section>
+
+  <script>
+    let saidaWhile = '';
+    let c = 1;
+    while (c <= 3) {
+      saidaWhile += 'Tentativa A ' + c + '\n';
+      c++;
+    }
+    document.getElementById('saida-while').textContent = saidaWhile;
+
+    let saidaDo = '';
+    let cb = 1;
+    do {
+      saidaDo += 'Tentativa B ' + cb + '\n';
+      cb++;
+    } while (cb <= 3);
+    document.getElementById('saida-do').textContent = saidaDo;
+
+    let saidaFor = '';
+    for (let cx = 1; cx <= 3; cx++) {
+      saidaFor += 'Tentativa C ' + cx + '\n';
+    }
+    document.getElementById('saida-for').textContent = saidaFor;
+  </script>
+
+</body>
+</html>
