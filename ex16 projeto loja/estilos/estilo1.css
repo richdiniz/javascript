@@ -20,3 +20,6 @@ footer{
 section, aside{
     background-color: salmon;
 }
+img{
+    width: 90px;
+}
