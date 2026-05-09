@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var qtlitros=40
+        var caminhoCG=480
+        var caminhoCA=300
+        var consumoG=qtlitros/caminhoCG, consumoA=qtlitros/caminhoCA;
+        document.write("consumo de gasolina L/km:"+consumoG.toFixed(3));
+        document.write("<br>consumo de alcool L/km:"+consumoA.toFixed(3));
+        //aredonda ,mas, colocando as casas decimais...
+
+        ppkmg=6.58/consumoG
+        ppkma=5.19/consumoA
+        document.write("<br>preço da gasolina 6,58. preço por km?"+ppkmg.toFixed(2))
+        document.write("<br>")
+        document.write("preço do alcool 5,19. preço por km?"+ppkma.toFixed(2))
+        document.write("<br>")
+        if(ppkmg<ppkma){
+            document.write("o menor é o da gasolina!")
+        }else{
+            document.write("o menor é o do alcool!")
+        }
+    </script>
+</body>
+</html>
