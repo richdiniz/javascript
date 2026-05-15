@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caixa{
+            background-color: aquamarine;
+            height: 180px;
+            width: 180px;
+        }
+        body{
+            /*background-color: #1C1C1E;*/
+            /*background-color: #1A1A1A;*/
+            background-color: #1E1E1E;
+        }
+    </style>
+</head>
+<body onload="r()">
+    <div id="caixa">
+        1
+    </div>
+    <script>
+
+        function mudar(){
+        var caixa = document.getElementById("caixa")
+        caixa.style.backgroundColor = "red"
+        caixa.style.width = "200px"
+        caixa.style.height = "200px"
+        }
+
+        
+        function r() {
+            var hj=new Date();
+            var hr= hj.getHours();
+            if(hr>=21){
+                mudar();
+            }
+        }
+    </script>
+</body>
+</html>
