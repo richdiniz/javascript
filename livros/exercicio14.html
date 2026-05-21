@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fotebol</h1>
+    <script>
+        function mostra(frase) {
+            document.write(frase)
+        }
+        //há necessidade de converssão para number pois prompts retornam no tipo String!
+        var vit=Number(prompt("quantos jogos seu time venceu?"));
+        var empates=Number(prompt("quantos jogos empatou?"));
+
+        var p = (vit*3)+empates;
+        mostra("total de pontos "+p)
+    </script>
+</body>
+</html>

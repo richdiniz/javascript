@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         #resultado{
-            background-color: rgba(0, 128, 0, 0.384);
+            background-color: rgba(0, 0, 0, 0);
         }
     </style>
 </head>
@@ -27,6 +27,7 @@
     <p><button type="submit" onclick="ver()">resultado</button></p>
     <div id="res"></div>
     <script>
+        //COMO ADAPTEI:
         var a=document.getElementById('alturaPessoa')
         var p=document.getElementById('pesoPessoa')
 
@@ -34,13 +35,13 @@
             var alt=Number(a.value)
             var pes=Number(p.value)
             var imc=pes/(alt*alt)
-            res.innerHTML+='<p id="resultado">seu imc é '+imc.toFixed(2)+'</p>'
+            res.innerHTML='<p id="resultado">seu imc é '+imc.toFixed(2)+'</p>'
         }
         function ver() {
             c_imc(a,p)
         }
 
-        /*TESTE2
+        /* //COMO TÁ NO LIVRO:
         var a=document.getElementById('alturaPessoa')
         var p=document.getElementById('pesoPessoa')
 
@@ -52,17 +53,9 @@
             return imc
         }
         function ver() {
-            res.innerHTML+='<p id="resultado">seu imc é '+c_imc(a,p).toFixed(2)+'</p>'
-        }*/
-
-        /*TESTE1
-        function c_imc(altura,peso){
-            var imc=peso/(altura*altura)
-            console.log(imc);
+            res.innerHTML='<p id="resultado">seu imc é '+c_imc(a,p).toFixed(2)+'</p>'
         }
-        var pm=70
-        var am=1.72
-        c_imc(am,pm)*/
+        */
     </script>
 </body>
 </html>

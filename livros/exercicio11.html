@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULADORA DE IMC</h1>
+    <p>O IMC (Índice de Massa Corporal) é uma medida utilizada para avaliar se o peso está adequado em relação à altura. O cálculo ajuda a identificar possíveis casos de baixo peso, peso ideal, sobrepeso e obesidade.</p>
+    <div>
+        altura:
+        <input type="number" id="alturaPessoa" required>
+    </div>
+    <div>
+        peso:
+        <input type="number" id="pesoPessoa" required>
+    </div>
+    <br>
+    <p><button type="submit" onclick="ver()">resultado</button></p>
+    <div id="res"></div>
+    <script>
+        //COMO ADAPTEI:
+        var a=document.getElementById('alturaPessoa')
+        var p=document.getElementById('pesoPessoa')
+
+        function c_imc(alt,pes){
+            var alt=Number(a.value)
+            var pes=Number(p.value)
+            var imc=pes/(alt*alt)
+            res.innerHTML='<p id="resultado">seu imc é '+imc.toFixed(2)+'</p>';
+
+//uso de condicionais if,else e else if:
+            if (imc.toFixed(3)>=40){
+                res.innerHTML+='<p>Obesidade Grave Grau 3, '+(imc-24.9).toFixed(2)+' pontos acima do limite da faixa ideal</p>';
+            }else if(imc.toFixed(3)>=35){
+                res.innerHTML+='<p>Obesidade Grau 2, '+(imc-24.9).toFixed(2)+' pontos acima do limite da faixa ideal</p>';
+            }else if(imc.toFixed(3)>=30){
+                res.innerHTML+='<p>Obesidade Grau 1, '+(imc-24.9).toFixed(2)+' pontos acima do limite da faixa ideal</p>';
+            }else if(imc.toFixed(4)>24.999 || imc.toFixed(3)>=25){
+                res.innerHTML+='<p>Sobrepeso, tome cuidado...</p>';
+            }else if(imc.toFixed(3)>=18.5 || imc.toFixed(4)>18.499){
+                res.innerHTML+='<p>Faixa Ideal</p>';
+            }else if(imc.toFixed(3)<18.5){
+                res.innerHTML+='<p>Magreza, tome cuidado...'+(18.5-imc).toFixed(2)+' pontos abaixo do mínimo da faixa ideal<p>';
+            }
+        }
+        
+        function ver() {
+            c_imc(a,p)
+        }
+    </script>
+</body>
+</html>
