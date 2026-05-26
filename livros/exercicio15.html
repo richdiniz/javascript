@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MEU JOGUINHO</h1>
+    <script>
+    // 1. Define o limite aleatório entre 1 e 10 e arredonda para baixo
+    var nlimite = Math.random() * 10;
+    var nl = Math.floor(nlimite) + 1; // +1 garante que o limite seja pelo menos 1
+
+    // 2. Avisa o usuário sobre o limite
+    alert("Pensei num número entre 0 e " + nl);
+
+    // 3. Gera o número secreto (np) entre 0 e o limite estipulado
+    var np = Math.floor(Math.random() * (nl + 1)); 
+    
+    // 4. Pede o chute do jogador
+    var chute = prompt("Qual número estou pensando?");
+
+    // 5. Validação se é um número
+    if (isNaN(chute) || chute.trim() === "") {
+        document.write("<h2>Isso não é um número válido!</h2>");
+    } 
+    else {
+        // Converte o chute para número inteiro para garantir a comparação correta
+        chute = parseInt(chute);
+
+        // 6. Checa se acertou ou errou
+        if (chute === np) {
+            document.write("<h2>🎉 Você acertou! Parabéns!</h2>");
+        } else {
+            document.write("<h2>❌ Você errou!</h2>");
+            
+            if (chute > np) {
+                document.write("<h3>Seu chute foi MAIOR do que o número que pensei.</h3>");
+            } else {
+                document.write("<h3>Seu chute foi MENOR do que o número que pensei.</h3>");
+            }
+            
+            document.write("<h3>Eu pensei no número: " + np + "</h3>");
+        }
+    }
+      /* CODIGO ERRADO:  
+        var nlimite=Math.random()*10;
+        nl=Math.round(nlimite);
+
+        var n=alert("pensei num numero entre "+nl+" e 0")
+        var np = Math.random();
+        var npensado= Math.round(np);
+        var nf= npensado && nl>=0 || npensado<=nl
+        
+        var chute=prompt("qual numero estou penssando?")
+
+    if(isNaN(chute)){
+        document.write(" isso não é um número")
+    }
+    else{
+        if(chute==np){
+            document.write("<h2>vc acertou</h2>")
+        }else{
+            document.write("<h2>vc errou!</h2>")
+            if (chute>np) {
+                document.write("<h2>seu chute foi maior</h2>")
+            }else{
+                document.write("<h2>seu chute foi menor</h2>")
+            }
+            document.write("<h2> eu pensei em "+np+"</h2>")
+        }
+    }*/
+    </script>
+</body>
+</html>

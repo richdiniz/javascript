@@ -11,12 +11,32 @@
         function mostra(frase) {
             document.write(frase)
         }
-        //há necessidade de converssão para number pois prompts retornam no tipo String! parseInt é mais adequado...
-        var vit=Number(prompt("quantos jogos seu time venceu?"));
-        var empates=Number(prompt("quantos jogos empatou?"));
+var pa=28;//valor dos pontos do time adversário
 
-        var p = (vit*3)+empates;
+        //há necessidade de converssão para number pois prompts retornam no tipo String! parseInt é mais adequado...
+        var vit=parseInt(prompt("quantos jogos seu time venceu?"));
+        var empates=parseInt(prompt("quantos jogos empatou?"));
+        var derrotas=parseInt(prompt("Quantos jogos perdeu?"));
+        
+        //calculo
+        var p = ((vit*3)+empates)-derrotas;
+        mostra("<h3> time rival tem "+28+" pontos</h3>")
         mostra("total de pontos "+p)
+
+        
+        function comparar(params) {
+            if (p>pa) {
+            mostra("<br>")
+            mostra("<p>nosso time está indo melhor q o outro</p>")
+        }else if (p<pa) {
+            mostra("<br>")
+            mostra("<p>nosso time está indo pior q o outro</p>")
+        }else if (p==pa) {
+            mostra("<br>")
+            mostra("</p>nosso time está empatado</p>")
+        }
+        }
+        comparar()
     </script>
 </body>
 </html>
