@@ -10,22 +10,26 @@
         var ano_d_copa= parseInt(prompt("digite o ano inicial"));
         var a_lim=parseInt(prompt("digite o ano limite"));
 
-        var a_olimp=parseInt(prompt("ano q deseja saber..."))
-
         function mostra(frase) {
             document.write(frase+"<br>")
         }
 
         while(ano_d_copa<=a_lim){
             mostra(ano_d_copa+" tem copa!")
-            ano_d_copa=ano_d_copa+4;
+            ano_d_copa=ano_d_copa+4
         }
-        mostra("Ufa! esses foram os anos de copa até "+ano_d_copa+".")
-        
-        while (1896<=a_olimp){
-            mostra(a_olimp+" tem olimpiadas!")
-            a_olimp=a_olimp+4;
+        mostra("Ufa! esses foram os anos de copa até "+a_lim+".")
+
+//-----olimpiadas-------------------------------------------------------
+
+        var a_o_l=parseInt(prompt("ano q deseja saber..."))
+        var a_o_i=1896
+
+        while (a_o_i<=a_o_l){
+            mostra(a_o_i+" tem olimpiadas!")
+            a_o_i=a_o_i+4
         }
+        mostra("...E esses foram os anos de olimpíada até "+a_o_l+".")
     </script>
 </body>
 </html>
