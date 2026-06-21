@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mostra(frase){
+            document.write(frase+"<br>")
+        }
+        var tdf=parseInt(prompt("Quantos familiares são?"))
+        var n=1
+        var idade=0
+        var ids=0
+        while (n<=tdf) {
+            idade=parseInt(prompt("qual a idade?"))
+            ids+=idade
+            n++
+        }
+        mostra(""+ids/tdf+"...")
+    </script>
+</body>
+</html>
