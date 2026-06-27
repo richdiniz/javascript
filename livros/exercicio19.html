@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo das adivinhações</title>
+</head>
+<body>
+    <script>
+        function mostra(frase){
+            document.write(frase+"<br>")
+        }
+
+        var numeroPensado=Math.round(Math.random()*100)
+        var n_tentativa=1
+
+        while(n_tentativa){
+            alert(n_tentativa+"° tentativa")
+            var chute=prompt("Qual vc acha que é?")
+
+            if (chute==numeroPensado) {
+                alert("Uau! Você acertou, pois eu pensei no "+numeroPensado)
+                break;
+            }else{
+                alert("Você errou! Será que tem mais tentativas?")
+                if (chute>numeroPensado) {
+                    alert("seu chute foi maior")
+                }else{
+                    alert("seu chute foi menor")
+                }
+            }
+            n_tentativa++
+        }
+    </script>
+</body>
+</html>

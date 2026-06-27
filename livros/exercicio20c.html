@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var tamanho=23
+
+        for(let linha= 0;linha<tamanho;linha++){
+
+            
+            for(let coluna=0; coluna<tamanho*2-1; coluna++){
+                if (coluna==linha || coluna==(tamanho*2-2-linha)) {
+                    document.write("X")
+                }else{
+                    document.write("_")
+                }
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

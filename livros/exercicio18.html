@@ -10,16 +10,17 @@
         function mostra(frase){
             document.write(frase+"<br>")
         }
-        var tdf=parseInt(prompt("Quantos familiares são?"))
-        var n=1
+        var TotalDeFamiliares=parseInt(prompt("Quantos familiares são?"))
+        var numero=1
         var idade=0
-        var ids=0
-        while (n<=tdf) {
+        var id_soma=0
+        while (numero<=TotalDeFamiliares) {
             idade=parseInt(prompt("qual a idade?"))
-            ids+=idade
-            n++
+            id_soma+=idade
+            numero++
         }
-        mostra(""+ids/tdf+"...")
+        var x=(id_soma/TotalDeFamiliares)
+        mostra("média dos familiares: "+x.toFixed(2))
     </script>
 </body>
 </html>
