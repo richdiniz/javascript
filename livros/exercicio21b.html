@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numero">seu palpite:</label>
+
+    <input type="text" id="numero" placeholder="digite aqui">
+    <input type="submit" id="adivinhar" value="compare com meu segredo!">
+
+    <script>
+        var segredos=[16, 34, 37, 42, 50, 58];
+        var caixaDoNumero=document.getElementById("numero");
+
+        function bc() {
+            for (var i = 0; i<segredos.length; i++){
+                if (segredos[i]==caixaDoNumero.value){
+                    alert("Parabéns! vc acertou um dos "+segredos.length+" numeros secretos ["+segredos+"]")
+                    return;
+                }
+            }
+            alert("infelizmente você errou!")
+        }
+
+           /* if (segredo==caixaDoNumero.value){
+                alert("Parabéns! você acertou o número secreto.")
+                caixaDoNumero.value=""//para limpar dps de clicar
+            }else{
+                alert("infelizmente você errou!")
+                caixaDoNumero.value=""//para limpar dps de clicar
+            }*/
+        var bt_adv=document.getElementById("adivinhar");
+        bt_adv.onclick=bc
+    </script>
+</body>
+</html>

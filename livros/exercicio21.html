@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numero">seu palpite:</label>
+
+    <input type="text" id="numero" placeholder="digite aqui">
+    <input type="submit" id="adivinhar" value="compare com meu segredo!">
+
+    <script>
+        var caixaDoNumero=document.getElementById("numero");
+        var bt_adv=document.getElementById("adivinhar");
+        bt_adv.onclick=bc;
+        function bc() {
+            alert(caixaDoNumero.value)
+        }
+        
+    </script>
+</body>
+</html>
