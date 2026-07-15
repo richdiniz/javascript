@@ -19,22 +19,26 @@
     <script>
         var tela=document.getElementById("tela")
         var c=tela.getContext("2d")
-
-        c.fillStyle ="red";
+        //colunas:
+        c.fillStyle ="chocolate"
         c.fillRect(0,0,200,400)
-
-        c.fillStyle="crimson"
+        c.fillStyle="white"
         c.fillRect(200,0,200,400)
-
-        c.fillStyle="darkred"
+        c.fillStyle="pink"
         c.fillRect(400,0,200,400)
 
-        //triâgulo
-        c.fillStyle="white"
+        //triâgulo:
+        c.fillStyle="blue"
         c.beginPath()
         c.moveTo(300,200)
         c.lineTo(200,400)
         c.lineTo(400,400)
+        c.fill()
+
+        //circulo:
+        c.fillStyle="blue"
+        c.beginPath()
+        c.arc(300,200,50,0,2*Math.PI)
         c.fill()
     </script>
 </body>
