@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .tela{
+            background-color: white;
+        }
+        figcaption{
+            font-style: italic;
+        }
+        /*canvas{
+            width: 600px;
+            height: 400px;
+        }*/
+    </style>
+</head>
+<body>
+    <h1>DESAFIO DAS BANDEIRAS</h1>
+    <figure>
+    <canvas id="tela1" width="600" height="400" class="tela"></canvas>
+    <figcaption>bandeira da Itália</figcaption>
+    </figure>
+
+    <figure>
+    <canvas id="tela2" width="600" height="400" class="tela"></canvas>
+    <figcaption>bandeira da Colombia</figcaption>
+    </figure>
+
+    <figure>
+    <canvas id="tela3" width="600" height="400" class="tela"></canvas>
+    <figcaption>bandeira da Noruega</figcaption>
+    </figure>
+
+    <figure>
+    <canvas id="tela4" width="600" height="400" class="tela"></canvas>
+    <figcaption>bandeira do Brasil</figcaption>
+    </figure>
+
+    <figure>
+    <canvas id="tela5" width="600" height="400" class="tela"></canvas>
+    <figcaption>bandeira de Madagascar</figcaption>
+    </figure>
+
+    <figure>
+    <canvas id="tela6" width="600" height="400" class="tela"></canvas>
+    <figcaption>bandeira do Laos</figcaption>
+    </figure>
+
+    <figure>
+    <canvas id="tela7" width="600" height="400" class="tela"></canvas>
+    <figcaption>bandeira da Niger</figcaption>
+    </figure>
+    <script>
+        var tela1=document.getElementById("tela1")
+        var t1=tela1.getContext("2d")
+        t1.fillStyle="green"
+        t1.fillRect(0,0,200,400)
+        t1.fillStyle="red"
+        t1.fillRect(400,0,200,400)
+
+        var tela2=document.getElementById("tela2")
+        var t2=tela2.getContext("2d")
+        t2.fillStyle="gold"
+        t2.fillRect(0,0,600,208)
+        t2.fillStyle="darkblue"
+        t2.fillRect(0,203,600,100)
+        t2.fillStyle="crimson"
+        t2.fillRect(0,303,600,400)
+
+        var tela3=document.getElementById("tela3")
+        var t3=tela3.getContext("2d")
+        t3.fillStyle="red"
+        t3.fillRect(0,0,600,400)
+        t3.fillStyle="white"
+        t3.fillRect(0,150,600,100)//faixa-horizontal
+        t3.fillStyle="white"
+        t3.fillRect(150,0,100,400)//faixa-vertical
+        t3.fillStyle="darkblue"//coluna-horizontal
+        t3.fillRect(0,177,600,45)        
+        t3.fillStyle="darkblue"//coluna-vertical
+        t3.fillRect(177,0,45,600)
+
+        var tela4=document.getElementById("tela4")
+        var t4=tela4.getContext("2d")
+        t4.fillStyle="green"
+        t4.fillRect(0,0,600,400)
+        t4.fillStyle="gold"//parte esquerda do losangulo
+        t4.beginPath()
+        t4.moveTo(29,200)
+        t4.lineTo(300,36)
+        t4.lineTo(300,360)
+        t4.fill()
+        t4.fillStyle="gold"//parte direita do losangulo
+        t4.beginPath()
+        t4.moveTo(571,200)
+        t4.lineTo(300,36)
+        t4.lineTo(300,360)
+        t4.fill()
+        t4.fillStyle="darkblue"
+        t4.beginPath()
+        t4.arc(300,200,111,0,2*Math.PI)
+        t4.fill()
+
+        
+    </script>
+</body>
+</html>

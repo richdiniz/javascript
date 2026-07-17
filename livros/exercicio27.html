@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>lousa</h1>
+    <canvas id="tela" width="600" height="400" onclick="cnc()"></canvas>
+    <script>
+        var tela=document.getElementById("tela")
+        var c=tela.getContext("2d")
+
+        c.fillStyle="gray"
+        c.fillRect(0,0,600,400)
+        
+tela.onclick= function(evento){
+              var x=evento.pageX-tela.offsetLeft
+              var y=evento.pageY-tela.offsetTop
+
+              c.fillStyle="black"
+              c.beginPath();
+              c.arc(x,y,7,0,2*3.14)
+              c.fill()
+              console.log("ckick na posição:"+x+","+y)
+        }
+    </script>
+</body>
+</html>
