@@ -31,9 +31,11 @@
   <script>
     var agora = new Date();
     var hora = agora.getHours();
+    var min = agora.getMinutes();
+
     var msg = document.getElementById('mensagem');
 
-    msg.innerHTML = 'Agora são exatamente ' + hora + ' horas.<br>';
+    msg.innerHTML = 'Agora são exatamente ' + hora + ':'+min+'<br>';
 
     if (hora >= 1 && hora <= 5) {
       msg.innerHTML += '🌙 MADRUGADA? Vá dormir!';
