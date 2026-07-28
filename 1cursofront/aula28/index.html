@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+</head>
+<body>
+    <!--
+    form: formulário
+    input: entrada de dados
+    subimit: enviar
+    button: botão
+    -->
+    <h1>formulários</h1>
+    <p>formulário HTMLl em uma página permite que o suário insira dados que são enviados a um servidor para processamento. ex:cadastro</p>
+    <form action="processa.html">
+<!--
+        ATRIBUTOS DE FORM:
+    'action' leva aquilo que foi digitado na página para o arquivo que fará o processamento, ex: processo.js.
+    'method' é o metodo de envio, usar GET é o padrão e o POST é para informações sensíveis. 
+-->
+        Email: <br>
+        <input type="text" name="email"><br>
+
+        Senha: <br>
+        <input type="password" name="senha"><br>
+
+        Comentário:<br>
+        <textarea name="comentário" id="" placeholder="digite um comentário"></textarea>
+
+        <br>
+        <!--
+        <input type="submit" value="entrar">
+        submit e reset
+        -->
+        <button>
+            <img src="../aula27/imagens-apoio/b6.jpg" width="20px"> Abrasileirar
+        </button>
+    </form>
+</body>
+</html>

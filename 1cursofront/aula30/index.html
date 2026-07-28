@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frormularios</title>
+</head>
+<body>
+    <!--
+    Label: legenda para o item da interface
+    for: para
+    -->
+    <h1>Formulários</h1>
+    <h2>Formu1</h2>
+    
+    <form action="../aula28/processa.html" method="get">
+<!--Label-->
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <br>
+
+<!--Rádio-->
+        Gênero:<br>
+        <input type="radio" name="genero" value="feminino" id="feminino">
+        <label for="feminino">Feminino</label>
+
+        <input type="radio" name="genero" value="masculino" id="masculino">
+        <label for="masculino">Masculino</label>
+        <br><br>
+
+        Você começou trabalhando com qual?<br>
+        <input type="radio" name="tipo" value="web">Web
+        <input type="radio" name="tipo" value="app">App
+        <br>
+
+<!--Checkbox-->
+        Estilo Musical:<br>
+        <input type="checkbox" name="estilo" value="rock" id="rock">
+        <label for="rock">Rock</label>
+        <input type="checkbox" name="estilo" value="jazz" id="jazz">
+        <label for="jazz">Jazz</label>
+        <input type="checkbox" name="estilo" value="classica" id="classica">
+        <label for="classica">Clássica</label>
+        <br>
+
+<!--Select-->
+        Estado<br>
+        <select name="estado" id="">
+            <option value="">selecione</option>
+            <option value="to">Tocantins</option>
+            <option value="df">Distrito Federal</option>
+            <option value="go">Goiás</option>
+            <option value="sc">Santa Catarina</option>
+            <option value="rs">Rio Grande do Sul</option>
+        </select>
+        <br>
+
+        Uploud de arquivo:
+        <input type="file" name="arquivo" id="">
+        <br><br><input type="submit" value="cadastrar">
+    </form>
+
+    <h2>Formu2-fildset & legend</h2>
+    <form>
+    <fieldset>
+        <legend>Dados pesssoais</legend>
+        <label for="e-mail">Email</label>
+        <input type="text" name="e-mail" id="e-mail">
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+    </fieldset>
+    <fieldset><!--conjunto de campo-->
+        <legend>Dados adcionais</legend><!--legenda para conjunto de campos-->
+        Gênero:<br>
+        <input type="radio" name="genero" value="feminino" id="f">
+        <label for="f">Feminino</label>
+
+        <input type="radio" name="genero" value="masculino" id="m">
+        <label for="m">Masculino</label>
+    </fieldset>
+    </form>
+</body>
+</html>
