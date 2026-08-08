@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas</title>
+    <style>
+        /*
+        border-width(espessura)
+        border-color(cor)
+        border-style(estilo)*/
+        
+        h1{
+            border-width: 10px;
+            border-color: blueviolet;
+            border-style: solid;
+        }
+        #A{
+            border-width: 12px 4px 6px 30px; /*sempre sentido horário*/
+            border-color: #ff0033 chartreuse darkviolet yellow;
+            border-style: s;
+        }
+
+        #B{
+            padding: 10px;
+           border-width: 10px 15px  15px 10px; /*sempre sentido horário*/
+           border-color: #ff0033 #c80028 #aa0022 #ff335c;
+           border-style: solid;
+        
+        }
+        #c{
+            border: 10px inset #ff0033;
+            /*tbm é possivel border: 10px inset solid groove dotted #ff0033;*/
+        }
+        #d{
+            border: 10px outset #ff0033;
+        }
+        #e{
+            border: 10px groove silver;
+        }
+        #f{
+            border: 10px ridge #ffd900;
+            border-radius: 10px;
+        }
+        
+        /*ESTILOS:
+        solid(linha normal)
+        dashed(pontilhado)
+        dotted(pontilhado com circulos)
+        double(linha dupla)
+        inset ou outset (reflexo simples)
+        groove ou ridge (reflexo duplo)
+        */
+    </style>
+</head>
+<body>
+    <h1>Esse é um titulo de exemplo</h1>
+    <span id="A">Lorem ipsum dolor sit, amet consectetur adipisicing elit.?</span>
+    <hr>
+    <br><br>
+    <span id="B">nmovmetomormvoetotnotetbrtbyrntum6uk6brrtrtb</span>
+    <br><br><br><br><br>
+    <span id="c">bgbjbjhbhbkbhninihnhbubbbbbybllllll</span>
+    <span id="d">bgbjbjhbhbkbhninihnhbubbbbbybllllll</span>
+    <br><br><hr><br>
+    <span id="e">bgbjbjhbhbkbhninihnhbubbbbbybllllll</span>
+    <span id="f">bgbjbjhbhbkbhninihnhbubbbbbybllllll</span>
+    <a href="index2.html"></a>
+</body>
+</html>
