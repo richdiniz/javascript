@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM e REM</title>
+    <style>
+        /*o rem é relativo ao que é usado na raiz Root element (html)*/
+        html{
+            font-size: 16px;
+        }
+        /*p{
+            font-size: 2em;/*relativo ao pai(body)
+            EX: 32px -> 1em, logo 2em = 64px
+                  20px -> 1em, logo 1.5rm = 30px
+                  obs:o padrão é 16px.*
+        }*/
+        .caixa-pequena{
+            border: 3px solid black;
+            font-size: 16px;
+        }
+        .caixa-grande{
+            border: 3px solid rgb(252, 2, 2);
+            font-size: 32px;
+        }
+        .um-em{
+            font-size: 1em;
+        }
+        .dois-em{
+            font: 2em;
+        }
+        .tres-em{
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <p class="tres-em">Destaque</p>
+    <p class="um-em">Menor</p>
+    <p class="dois-em">Médio</p>
+<!--<div class="caixa-grande">
+        <p>Luís</p>
+        Luís
+    </div>
+<hr>
+    <div class="caixa-pequena">
+        <p>Luís</p>
+        Luís
+    </div>-->
+</body>
+</html>
